@@ -7,10 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    @IBOutlet var swoosh: UIImageView!
-    @IBOutlet var bgimg: UIImageView!
+class WelcomeVC: UIViewController {
     
     
     override func viewDidLoad() {

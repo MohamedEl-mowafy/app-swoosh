@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DAf-iK-uPC">
-                                <rect key="frame" x="75.333333333333371" y="289.66666666666669" width="263.33333333333326" height="44"/>
+                                <rect key="frame" x="75.333333333333343" y="289.66666666666669" width="263.33333333333326" height="44"/>
                                 <string key="text">Find a team in your city &amp; dominate 
 the league</string>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="16"/>
@@ -54,7 +54,7 @@ the league</string>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="pyQ-lb-glC">
-                                <rect key="frame" x="147.66666666666663" y="20" width="118.99999999999997" height="20"/>
+                                <rect key="frame" x="147.66666666666666" y="20" width="118.99999999999997" height="20"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -77,19 +77,15 @@ the league</string>
                             <constraint firstItem="Qfa-bP-Cu0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xYG-Dl-YOm"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="bgimg" destination="Qfa-bP-Cu0" id="YUE-Bo-Xed"/>
-                        <outlet property="swoosh" destination="pyQ-lb-glC" id="TEJ-EZ-Ktc"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="118.20652173913044"/>
         </scene>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="AS1-f5-ABL">
             <objects>
-                <viewController id="fT2-0r-uyh" sceneMemberID="viewController">
+                <viewController id="fT2-0r-uyh" customClass="LeagueVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SVU-j7-INT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -163,6 +159,9 @@ the league</string>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNextTapped:" destination="fT2-0r-uyh" eventType="touchUpInside" id="xzx-q2-rOh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uym-P4-dLX">
                                 <rect key="frame" x="20" y="10" width="61" height="47"/>
@@ -197,28 +196,31 @@ the league</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="54r-Ad-OqJ"/>
+                    <connections>
+                        <segue destination="pzU-wC-rPt" kind="show" identifier="skillVCSegue" id="sDv-5N-spn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJz-jw-BE6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="0Eb-cx-IgP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="824.63768115942037" y="117.39130434782609"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="NWd-AL-tZY">
             <objects>
-                <viewController id="pzU-wC-rPt" sceneMemberID="viewController">
+                <viewController id="pzU-wC-rPt" customClass="SkillVC" customModule="app_swoosh" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fV2-rA-09M">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="beginnerBallerBG" translatesAutoresizingMaskIntoConstraints="NO" id="thd-iT-uR2">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="1Vl-e9-fSG">
                                 <rect key="frame" x="0.0" y="20" width="414" height="95"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="inb-ZO-Qwc">
-                                        <rect key="frame" x="147.66666666666663" y="0.0" width="118.99999999999997" height="20"/>
+                                        <rect key="frame" x="147.66666666666666" y="0.0" width="118.99999999999997" height="20"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I am a :" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hy8-fs-Mwd">
                                         <rect key="frame" x="122" y="75" width="170" height="20"/>
@@ -260,7 +262,7 @@ the league</string>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTm-oJ-VYg" customClass="BorderButton" customModule="app_swoosh" customModuleProvider="target">
-                                <rect key="frame" x="20" y="646" width="374" height="70"/>
+                                <rect key="frame" x="20" y="626" width="374" height="70"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.70156264150000003" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="hWd-It-foS"/>
@@ -289,6 +291,7 @@ the league</string>
                             <constraint firstItem="thd-iT-uR2" firstAttribute="leading" secondItem="Njn-qt-GKG" secondAttribute="leading" id="zHs-ly-PuT"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="d16-Mu-efR"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zkk-Pq-7yk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
